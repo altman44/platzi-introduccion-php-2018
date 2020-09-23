@@ -102,12 +102,12 @@ class AuthController extends BaseController
 
     public function logoutAction() {
         unset($_SESSION['userId']);
-        return new RedirectResponse(BASE_ROUTE.'/');
+        return new RedirectResponse('/');
     }
 
     private function enterTheApp($id) {
         $_SESSION['userId'] = $id;
-        return new RedirectResponse(BASE_ROUTE.'/dashboard');
+        return new RedirectResponse('/dashboard');
     }
 
     private function getUserDataValidator($typeOfEntry)

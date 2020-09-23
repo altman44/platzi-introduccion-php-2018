@@ -2,7 +2,7 @@
 
 {% block head %}
 
-	<link rel="stylesheet" href="{{ defaultURL }}/styles/form.css" type="text/css">
+	<link rel="stylesheet" href="/styles/form.css" type="text/css">
 
 {% endblock head %}
 
@@ -10,7 +10,7 @@
 
 	<div class="form-wrapper">
 		<p class="main-title">Add Aptitude</p>
-		<form action="{{ defaultURL }}/aptitudes/add" method="POST" class="form" enctype="multipart/form-data">
+		<form action="/aptitudes/add" method="POST" class="form" enctype="multipart/form-data">
 			<div class="form-group">
 				<label for="aptitude-name" class="form-label">
 					Name

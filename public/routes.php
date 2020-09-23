@@ -52,32 +52,32 @@ if (!$route) {
 function router($request, $routerContainer)
 {
     $map = $routerContainer->getMap();
-    $map->get('home', BASE_ROUTE . '/', [
+    $map->get('home', '/', [
         'controller' => 'App\Controllers\HomeController',
         'action' => 'homeAction'
     ]);
 
-    $map->get('go_to_login', BASE_ROUTE . '/login', [
+    $map->get('go_to_login', '/login', [
         'controller' => 'App\Controllers\AuthController',
         'action' => 'loginAction'
     ]);
 
-    $map->post('login_data', BASE_ROUTE . '/login', [
+    $map->post('login_data', '/login', [
         'controller' => 'App\Controllers\AuthController',
         'action' => 'loginAction'
     ]);
 
-    $map->get('go_to_register', BASE_ROUTE . '/register', [
+    $map->get('go_to_register', '/register', [
         'controller' => 'App\Controllers\AuthController',
         'action' => 'registerAction'
     ]);
 
-    $map->post('register_data', BASE_ROUTE . '/register', [
+    $map->post('register_data', '/register', [
         'controller' => 'App\Controllers\AuthController',
         'action' => 'registerAction'
     ]);
 
-    $map->get('logout', BASE_ROUTE . '/logout', [
+    $map->get('logout', '/logout', [
         'controller' => 'App\Controllers\AuthController',
         'action' => 'logoutAction',
         'auth_required' => true,
@@ -85,7 +85,7 @@ function router($request, $routerContainer)
         'secondaryAction' => 'homeAction'
     ]);
 
-    $map->get('addAptitudes', BASE_ROUTE . '/aptitudes/add', [
+    $map->get('addAptitudes', '/aptitudes/add', [
         'controller' => 'App\Controllers\AptitudesController',
         'action' => 'getAddAptitudeAction',
         'auth_required' => true,
@@ -93,7 +93,7 @@ function router($request, $routerContainer)
         'secondaryAction' => 'loginAction'
     ]);
 
-    $map->post('saveAptitudes', BASE_ROUTE . '/aptitudes/add', [
+    $map->post('saveAptitudes', '/aptitudes/add', [
         'controller' => 'App\Controllers\AptitudesController',
         'action' => 'getAddAptitudeAction',
         'auth_required' => true,
@@ -101,7 +101,7 @@ function router($request, $routerContainer)
         'secondaryAction' => 'loginAction'
     ]);
 
-    $map->get('dashboard', BASE_ROUTE . '/dashboard', [
+    $map->get('dashboard', '/dashboard', [
         'controller' => 'App\Controllers\DashboardController',
         'action' => 'indexAction',
         'auth_required' => true,

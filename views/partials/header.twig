@@ -2,16 +2,16 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="{{ defaultURL }}/">Home</a>
+				<a href="/">Home</a>
 			</li>
             {% if logged %}
-                <li><a href="{{ defaultURL }}/dashboard">Dashboard</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
             {% endif %}
 		</ul>
 		{% if logged %}
 			<div class="auth-options">
 				<ul>
-					<li><a href="{{defaultURL}}/logout" class="auth-option">Logout</a></li>
+					<li><a href="/logout" class="auth-option">Logout</a></li>
 				</ul>
 			</div>
 			<div class="img-profile-container">
@@ -22,8 +22,8 @@
 		{% else %}
 			<div class="auth-options">
 				<ul>
-					<li><a href="{{ defaultURL }}/login" class="auth-option">Sign In</a></li>
-					<li><a href="{{ defaultURL }}/register" class="auth-option">Sign Up</a></li>
+					<li><a href="/login" class="auth-option">Sign In</a></li>
+					<li><a href="/register" class="auth-option">Sign Up</a></li>
 				</ul>
 			</div>
 		{% endif %}
