@@ -12,12 +12,13 @@ require_once '../vendor/autoload.php';
 session_start();
 
 $dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__.'/..');
-$dotenv->load();
+if (getenv('APP_ENV') !== 'production') {
+    $dotenv->load();
+}
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 $capsule = new Capsule;
-
 $capsule->addConnection([
     'driver'    => getenv('DB_DRIVER'),
     'host'      => getenv('DB_HOST'),
@@ -27,6 +28,7 @@ $capsule->addConnection([
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',
+    'sslmode' => 'require'
 ]);
 
 // Make this Capsule instance available globally via static methods... (optional)
