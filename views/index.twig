@@ -1,0 +1,41 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<p class="text-center main-title">
+    {{ generalData.name }} {{ generalData.lastname }}
+</p>
+
+<div class="container">
+    <p class="main-subtitle">Aptitudes</p>
+    <ul>
+        {% for aptitude in aptitudes %}
+            <li class="text-competence
+            {% if aptitude.important %}
+                text-primary
+            {% endif %}
+            ">
+            {{ aptitude.name }}
+            </li>
+            {% if aptitude.logo_filename %}
+            <img src="uploads/{{ aptitude.logo_filename }}" alt="{{ aptitude.name }} - logo" />
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+<div class="container-horizontal">
+    <hr/>
+</div>
+<div class="container">
+    <p class="main-subtitle">Languages</p>
+    <ul>
+        {% for language in languages %}
+            <li>
+            <span class="text-competence">{{ language.name }}</span>
+            (exerience: {{ language.experience }})
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,57 @@
+@import 'header.css';
+@import 'main-content.css';
+
+root {
+    /* It doesn't work */
+    --primaryColor: rgb(4, 4, 88);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    background-color: rgb(23, 255, 147);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-competence {
+    font-weight: bold;
+    font-size: large;
+}
+
+.text-primary {
+    color: rgb(4, 4, 88);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.container {
+    padding: 5%;
+}
+.container-horizontal {
+    padding: 0 5%;
+}
+
+.button {
+    border-radius: 3%;
+    border: 1px solid rgb(180, 178, 178);
+    padding: 1%;
+}
+
+.no-text-decoration {
+    text-decoration: none;
+}

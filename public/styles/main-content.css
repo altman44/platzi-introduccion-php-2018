@@ -1,0 +1,16 @@
+#Main {
+    padding: 4%;
+}
+
+hr {
+    border-color: rgb(4, 4, 88);
+}
+
+#Main .main-title {
+    font-size: 38px;
+    margin-bottom: 2%;
+}
+#Main .main-subtitle {
+    font-size: 32px;
+    margin-bottom: 2%;
+}

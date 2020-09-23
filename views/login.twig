@@ -1,0 +1,20 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+	<div class="form-wrapper">
+		<div class="form-wrapper-title">
+            <p class="main-title">Login</p>
+        </div>
+
+		{% include 'partials/form_user_fields.twig' %}
+
+		<div class="box-bottom">
+			<p>
+			<span>New?</span>
+			<a href="{{ defaultURL }}/register" class="no-text-decoration">Create an account</a>
+			</p>
+		</div>
+	</div>
+
+{% endblock content %}

@@ -1,0 +1,31 @@
+<header id="Header">
+	<nav>
+		<ul>
+			<li>
+				<a href="{{ defaultURL }}/">Home</a>
+			</li>
+            {% if logged %}
+                <li><a href="{{ defaultURL }}/dashboard">Dashboard</a></li>
+            {% endif %}
+		</ul>
+		{% if logged %}
+			<div class="auth-options">
+				<ul>
+					<li><a href="{{defaultURL}}/logout" class="auth-option">Logout</a></li>
+				</ul>
+			</div>
+			<div class="img-profile-container">
+				<a href="https://www.linkedin.com/in/nicolas-altman-a376941a4/" target="_blank" title="My Linkedin">
+					<img class="img-profile" src="https://media-exp1.licdn.com/dms/image/C4E03AQEmHK9THFyXfw/profile-displayphoto-shrink_200_200/0?e=1605744000&v=beta&t=ncQjQgXdyV9HDXFQWra__71C0SpIyBiLXS8UwD-wKMg" alt="">
+				</a>
+			</div>
+		{% else %}
+			<div class="auth-options">
+				<ul>
+					<li><a href="{{ defaultURL }}/login" class="auth-option">Sign In</a></li>
+					<li><a href="{{ defaultURL }}/register" class="auth-option">Sign Up</a></li>
+				</ul>
+			</div>
+		{% endif %}
+	</nav>
+</header>

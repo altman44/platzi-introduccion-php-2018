@@ -1,0 +1,119 @@
+.form-wrapper {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.form {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.form .form-group {
+  padding: 3% 0;
+  width: 100%;
+}
+
+.form .form-label {
+  font-size: 18px;
+  margin-bottom: 1%;
+}
+.form .form-field {
+  font-size: 18px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.form input {
+    border: 3px solid transparent;
+    transition: border .5s ease;
+}
+.form input:focus {
+    outline: none;
+    border: 3px solid rgb(4, 4, 88);
+}
+.form input[type="checkbox"] {
+  transform: scale(1.5) translateX(50%);
+}
+.form input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.form .label-file {
+  font-weight: 600;
+  color: #fff;
+  background-color: #106ba0;
+  display: inline-block;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  padding: 3% 5%;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: fit-content;
+  text-align: center;
+}
+.form .label-file:hover {
+    transform: scale(.95);
+}
+.form .span-filename {
+    color: black;
+}
+.form .form-select {
+  padding: 1%;
+}
+.form .select-privileges {
+  text-transform: uppercase;
+}
+
+.form .response-message {
+  margin: 2% 0;
+  font-weight: bold;
+  animation: fadeIn .5s;
+}
+.form .response-message[data-type="error"] {
+    color: rgb(255, 0, 0);
+}
+.form .response-message[data-type="info"] {
+    color: #106ba0;
+}
+.form .response-message[data-type="success"] {
+    color: rgb(3, 85, 7);
+}
+
+.form .button-submit {
+  transition: transform 0.5s ease, color 0.5s ease, border 5s ease;
+  border: 1.5px solid black;
+  border-radius: 6px;
+  font-size: 18px;
+  width: 20%;
+}
+.form .button-submit[data-bg-color="bg-primary"] {
+  background-color: rgb(4, 4, 88);
+  color: white;
+  letter-spacing: 1px;
+  box-shadow: 0 0 4px 1px rgb(25, 0, 255);
+}
+.form .button-submit:hover {
+  transform: scale(0.98);
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}

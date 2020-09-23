@@ -1,0 +1,57 @@
+#Header {
+    background-color:  rgb(4, 4, 88);
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+#Header nav {
+    padding: 1% 4%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Header nav ul {
+    width: 100%;
+    white-space: nowrap;
+    padding: 0 2%;
+}
+#Header nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 5%;
+}
+#Header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+#Header nav ul li a:hover {
+    color: rgb(23, 255, 147);
+}
+#Header nav .img-profile-container {
+    width: 8%;
+    padding: .5%;
+}
+#Header nav .img-profile {
+    width: 100%;
+    border-radius: 40%;
+    transition: .5s ease;
+}
+#Header nav .img-profile:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+    box-shadow: 0 0 10px grey;
+    border-radius: 50%;
+}
+#Header .auth-options ul {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+#Header .auth-options .auth-option {
+    text-decoration: none;
+    color: white;
+}
