@@ -7,7 +7,7 @@ ini_set('display_errros', 1); // inicializa variables de php para mostrar los er
 ini_set('display_starup_errror', 1); // encender los errores
 error_reporting(E_ALL); // E_ALL: todos los errores
 
-const BASE_ROUTE = '/Curso%20de%20Introduccion%20PHP%202018';
+const BASE_ROUTE = '';
 
 require_once '../vendor/autoload.php';
 

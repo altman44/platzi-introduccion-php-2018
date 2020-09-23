@@ -9,7 +9,7 @@ class BaseController
     protected $templateEngine;
     private $defaultData = [
         'templates' => [
-            'defaultURL' => '/Curso%20de%20Introduccion%20PHP%202018',
+            'defaultURL' => '',
             'head' => [
                 'title' => 'Curso de Programación PHP 2018'
             ]
