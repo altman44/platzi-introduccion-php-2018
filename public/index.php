@@ -19,6 +19,7 @@ session_start();
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 var_dump(getenv('APP_ENV'));
+var_dump(phpinfo());
 
 $capsule = new Capsule;
 // $capsule->addConnection([
