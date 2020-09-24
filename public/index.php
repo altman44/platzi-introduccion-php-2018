@@ -18,7 +18,8 @@ session_start();
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-var_dump(getenv('APP_ENV'));
+echo '$_SERVER["DB_DRIVER"]';
+var_dump($_SERVER['DB_DRIVER']);
 var_dump(phpinfo());
 
 $capsule = new Capsule;
