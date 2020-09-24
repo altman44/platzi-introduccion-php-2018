@@ -18,6 +18,8 @@ session_start();
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
+var_dump(getenv('APP_ENV'));
+
 $capsule = new Capsule;
 // $capsule->addConnection([
 //     'driver'    => getenv('DB_DRIVER'),
