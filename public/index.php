@@ -11,20 +11,31 @@ require_once '../vendor/autoload.php';
 
 session_start();
 
-if (getenv('APP_ENV') !== 'production') {
-    $dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__.'/..');
-    $dotenv->load();
-}
+// if (getenv('APP_ENV') !== 'production') {
+//     $dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__.'/..');
+//     $dotenv->load();
+// }
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 $capsule = new Capsule;
+// $capsule->addConnection([
+//     'driver'    => getenv('DB_DRIVER'),
+//     'host'      => getenv('DB_HOST'),
+//     'database'  => getenv('DB_NAME'),
+//     'username'  => getenv('DB_USER'),
+//     'password'  => getenv('DB_PASS'),
+//     'charset'   => 'utf8',
+//     'collation' => 'utf8_unicode_ci',
+//     'prefix'    => '',
+//     'sslmode' => 'require'
+// ]);
 $capsule->addConnection([
-    'driver'    => getenv('DB_DRIVER'),
-    'host'      => getenv('DB_HOST'),
-    'database'  => getenv('DB_NAME'),
-    'username'  => getenv('DB_USER'),
-    'password'  => getenv('DB_PASS'),
+    'driver'    => 'pgsql',
+    'host'      => 'ec2-23-20-168-40.compute-1.amazonaws.com',
+    'database'  => 'd3m5ebrg7il9b8',
+    'username'  => 'kkjmgsrbflcmib',
+    'password'  => '00b2f3def22567084024d60724c07ff417b6a0f7969b4dd740f1ec0343a8d80e',
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',
