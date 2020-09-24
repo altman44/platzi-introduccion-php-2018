@@ -11,8 +11,8 @@ require_once '../vendor/autoload.php';
 
 session_start();
 
-$dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__.'/..');
 if (getenv('APP_ENV') !== 'production') {
+    $dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__.'/..');
     $dotenv->load();
 }
 
